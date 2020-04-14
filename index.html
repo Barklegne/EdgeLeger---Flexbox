@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Kicks in until the max-width is 768px -->
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" href="css/style.css">
+    
     
     <!-- Only kicks in when the width is bigger than 1110px  -->
-    <link rel="stylesheet" media="screen and (min-width: 1100px;)" href="css/widescreen.css.css">
-    
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="css/widescreen.css">
+  
+    <!-- Kicks in until the max-width is 768px -->
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+
+    <!-- Fontawesome -->
     <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
     
     <title>EdgeLedger Financial | Accounting & Investment</title>
@@ -20,8 +23,7 @@
     <nav id="navbar">
         <h1 class="logo">
             <span class="text-primary">
-                <i class="fa fa-pied-piper" aria-hidden="true"></i> Edge
-            </span>Leger
+                <i class="fa fa-pied-piper" aria-hidden="true"></i> Edge</span>Leger
         </h1>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -30,6 +32,142 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    <!-- Header: Showcase -->
+    <header id="showcase">
+        <div class="showcase-content">
+            <h1 class="l-heading">
+                The Sky Is The Limit
+            </h1>
+            <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, vero sunt eligendi assumenda saepe sequi.
+            </p>
+            <a href="#what" class="btn">Read More</a>
+        </div>
+    </header>
+
+    <!-- Section: What We Do  -->
+    <section id="what" class="bg-light py-1">
+        <div class="container">
+            <h2 class="m-heading text-center">
+                <span class="text-primary">What</span> We Do
+            </h2>
+        </div>
+        <div class="items">
+            <div class="item">
+                <i class="fa fa-university fa-2x" aria-hidden="true"></i>
+                <div>
+                    <h3>Investment Banking </h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, dolorem!</p>
+                </div> 
+            </div>
+            <div class="item">
+                <i class="fa fa-book fa-2x" aria-hidden="true"></i>
+                <div>
+                    <h3>Portfolio Management </h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, dolorem!</p>
+                </div>
+            </div>
+            <div class="item">
+                <i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+                <div>
+                    <h3>Tax & Custodial </h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, dolorem!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secctin: Who We Are -->
+    <section id="who">
+        <div class="who-img">
+           
+        </div>
+        <div class="who-text bg-dark p-2">
+            <h2 class="m-heading">
+                <span class="text-primary">
+                    Who 
+                </span> We Are
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, debitis in facere dolore velit accusamus magni. Nam asperiores, beatae, adipisci natus deleniti cum nulla ad, voluptates laboriosam eum consectetur error?
+            </p>
+            <h3>Our Team</h3>
+            <ul class="list">
+                <li>Barklegne Eshetu: CFO</li>
+                <li> Yididiya Hailemichael : CTO</li>
+                <li>Mikiyas Yehualashet : VP</li>
+                <li>Barklegne Eshetu: CFO</li>
+                <li> Yididiya Hailemichael : CTO</li>
+                <li>Mikiyas Yehualashet : VP</li>
+            </ul>
+        </div>
+    </section> 
+
+    <!-- Section Clients -->
+    <section id="clients" class="py-1">
+        <div class="container ">
+            <h2 class="m-heading text-center">
+                <span class="text-primary">Our</span> Clients
+            </h2>
+            <div class="items py-1">
+                <div><img src="./img/logos/logo1.png" alt="Client"></div>
+                <div><img src="./img/logos/logo2.png" alt="Client"></div>
+                <div><img src="./img/logos/logo3.png" alt="Client"></div>
+                <div><img src="./img/logos/logo4.png" alt="Client"></div>
+                <div><img src="./img/logos/logo5.png" alt="Client"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Contact -->
+    <section id="contact">
+        <div class="contact-form bg-primary p-2">
+            <h2 class="m-heading">Contact Us</h2>
+            <p>Please use the form below to contact us</p>
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Enter Message"> </textarea>
+                </div>
+                <input type="submit" value="Send" class="btn btn-dark">
+            </form>
+        </div>
+        <!-- AIzaSyABU7NW7rReBcUbJf44NnI7BBkm3PhRUmA -->
+        <div class="map" id="map">
+
+        </div>
+    </section>
     
+    <!-- Footer -->
+    <footer class="bg-dark text-center py-1">
+        <div class="container">
+            <p>Copyright &copy; 2019, EdgeLeger, All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    <!-- JQuery CDN -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+    <!-- Local Js File -->
+    <script src="./js/main.js"></script>
+
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABU7NW7rReBcUbJf44NnI7BBkm3PhRUmA&callback=initMap"
+    async defer></script>
 </body>
 </html>

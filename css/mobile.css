@@ -1,0 +1,94 @@
+/* Removing Flex to stack top  on top of each other */
+#what .items {
+    display: block;
+    padding: 1rem;
+}
+
+/* Align icon to left */
+#what .items .item {
+    /* Turning item class to a flex container */
+    display: flex;
+    
+    text-align: left ;
+}
+
+#what .items .item  i {
+    margin-right: 1.3rem;
+   
+    /* Align the icon at the center of its parent */
+    align-self: center;
+    
+    /* Removing default margins from bottom */
+    margin-bottom: 0;
+}
+
+/* Smartphones */
+@media(max-width: 500px) {
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar .logo {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    #navbar ul {
+        padding: 0.5rem;
+    }
+
+    /* Fixing the Overlay */
+    #showcase .showcase-content {
+        top: 118px;
+        /* margin-top: -1.5rem; */
+    }
+
+    #who {
+        /* Removing the flex */
+        display:block;
+    }
+
+    /* Removing image */
+    #who .who-img {
+        display: none;
+    }
+
+    /* Removing last image */
+    #clients .items div:last-child {
+        display:none;
+    }
+    /* Removing another image */
+    #clients .items div:nth-last-child(4) {
+        display:none;
+    }
+
+    #contact {
+        display: block;
+        /* flex-direction: column; */
+    }
+
+    #contact .map {
+        height: 200px;
+        border: #333 5px solid;
+    }
+    
+}
+
+/* For Smartphone with max-height of 568px ex Iphone 5/SE */
+@media(max-height: 568px) {
+    /* Fixing the overlay */
+    #showcase .showcase-content {
+        margin-top: -1.5rem;
+        top: 143px
+    }
+    /* Minimizing the large heading font*/
+    .l-heading {
+        font-size: 3rem;
+    }
+
+    /* Minimizing the showcase discription */
+    .lead {
+        font-size: 1rem;
+    }
+}

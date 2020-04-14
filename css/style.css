@@ -1,3 +1,4 @@
+/* Importing google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* Resetting The Whole Page For Padding and Margin */
@@ -9,6 +10,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
 }
 
 a {
@@ -19,11 +21,109 @@ p {
     margin: 0.75rem 0;
 }
 
-/* Utility Classes */
+/* Start Utility Classes */
+
+.container {
+    /* We Want To Extrict It To A Certain Width  */
+    max-width: 1100px;
+
+    /* Align To The Middle */
+    margin: auto;
+    
+    /* Padding To The Container */
+    padding: 0 2rem;
+    
+    /* Not Clear */
+    overflow: hidden;
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.bg-primary{
+    background: #93cb52;
+    color: #fff;
+}
+
+.bg-dark{
+    background: #333;
+    color: #fff;
+}
+
 .text-primary {
     color: #93cb52;
 }
 
+/* Larg Heading */
+.l-heading {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+/* Medium Heading */
+.m-heading {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+/* Padding Y-Axis */
+.py-1 { padding: 1.5rem 0; } 
+.py-2 { padding: 2rem 0; } 
+.py-3 { padding: 3rem 0; } 
+
+/* Padding On All Sides */
+.p-1 { padding: 1.5rem; } 
+.p-2 { padding: 2rem; } 
+.p-3 { padding: 3rem; } 
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #93cb52;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #7ab436;
+}
+
+.btn-dark {
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-dark:hover{
+    background: rgb(41, 41, 41);
+}
+
+.list {
+    margin: 0.5rem 0;
+    list-style: none;
+}
+
+.list li {
+    padding: 0.5rem 0;
+    border-bottom: #444 dotted 1px;
+} /* End Utility Classes */
+
+/* Navbar */
 #navbar {
     /* Child Items Will be Floated Horizontally the h1 & ul (Not the li) */
     display: flex;
@@ -54,8 +154,8 @@ p {
 }
 
 #navbar ul li a {
-    /* Enable for debugging only */
-    border: white 1px dotted;
+    /* Enable For debugging only */
+    /* border: white 1px dotted; */
 
     color: #fff;
     
@@ -69,4 +169,131 @@ p {
 #navbar ul li a:hover {
     background: #93cb52;
     border-radius: 5px;
+}
+
+/* Showcase */
+#showcase {
+    background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
+
+    /* 100vh Makes the image go all over the showcase regardless of the content inside the showcase */
+    height: 100vh;
+    color: #fff;
+}
+
+#showcase .showcase-content {
+    /* Default is Horizontal Layout */
+    display: flex;
+    
+    /* Changing Flex Direction To Vertical Alignment */
+    flex-direction: column;
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    /* The Above 3 Wont center Vertically Because No Hight On show-case Content So We Add The Following Code  */
+   
+    /* 100% Of Its Parent [#showcase w/h Is 100vh] */
+    height: 100%;  
+
+    /*  0rem For Top & Bootm, 2rem For Left & Right */
+    padding: 0 2rem;
+
+    /* OVERLAY */
+    position: absolute;
+    
+    /* Top Defines Where The Overlay Should Start [0 Makes It From The Top But We Have The Sticky Menu So We Set It To an Absloute Value of 65px] */
+    top: 65px;
+
+    /* Other Starting Positions Must Be Defined */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background-color: rgba(0,0,0,0.4);
+    
+}
+
+/* Section: What We Do */
+#what .items {
+    display: flex;
+    padding: 1rem;
+}
+
+#what .items .item {
+    /* Equal Sides For The Childs */
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+/* What We Do Icons */
+#what .items .item  i {
+    background: #93cb52;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+
+/* Section: Who We Are */
+#who {
+    display: flex;
+}
+
+/* Any Div (The Child) Should Have Equal Size */
+#who div {
+    flex:1;
+}
+
+/* The 1st Div With Class who-img */
+#who .who-img {
+    background: url('../img/people.jpg') no-repeat center center/cover;
+}
+
+/* Section: Clients */
+#clients .items {
+    display: flex;
+}
+
+#clients .items img {
+    
+    /* Enables To Add Width To The Items */
+    display: block;
+
+    /* To Center */
+    margin: auto;
+    
+    /* Enable For Debugging Only */
+    /* border: #000 1px dotted; */
+    
+    width: 60%;
+}
+
+/* Section: Contact */
+#contact {
+    display: flex;
+}
+
+/* Both `Map` Section and `Contact -Form` Section Are Even */
+#contact .map, #contact .contact-form {
+    flex: 1
+}
+
+#contact .contact-form .form-group {
+    margin: 0.75rem;
+}
+
+#contact .contact-form label {
+    display: block;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+    /* Sends Across To the End */
+    width:  100%;
+
+    /* Sets The Height Of input &  TextArea Elements */
+    padding: .5rem;
 }

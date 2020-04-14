@@ -1,0 +1,23 @@
+/* Align icon to left */
+#what .items .item {
+    /* Turning item class to a flex container */
+    display: flex;
+    
+    text-align: left ;
+}
+
+#what .items .item  i {
+    margin-right: 1.3rem;
+   
+    /* Align the icon at the center of its parent */
+    align-self: center;
+    
+    /* Removing default margins from bottom */
+    margin-bottom: 0;
+}
+
+/* On widescreen the map will take more space */
+#contact .map {
+    flex: 2;
+}
+
