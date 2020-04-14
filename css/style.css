@@ -1,11 +1,12 @@
-/* https://fonts.googleapis.com/css2?family=Roboto&display=swap */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* Resetting The Whole Page For Padding and Margin */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -24,27 +25,45 @@ p {
 }
 
 #navbar {
+    /* Child Items Will be Floated Horizontally the h1 & ul (Not the li) */
     display: flex;
+    
+    /* Makes the navbar to stick at the top */
     position: sticky;
     top: 0;
     background: #333;
-    top:0;
     color: #fff;
+    
+    /* Align things horizontally */
     justify-content: space-between;
+    
+    /*igher the number the closer to the screen*/
     z-index: 1;
+    
+    /* rem multiplies the font size of the root element font size (HTML) */
     padding: 1rem;
 }
 #navbar ul {
+    /* Child Items Will be Floated Horizontally In this case the li*/
     display:flex;
+    
+    /*  Puts ul at the same level as the logo (h1) */
     align-items: center;
+    
     list-style: none;
 }
 
 #navbar ul li a {
-    color: #fff;
-    padding: 0.75rem;
-    margin:  0 0.25rem;
+    /* Enable for debugging only */
+    border: white 1px dotted;
 
+    color: #fff;
+    
+    /* Sets space inside of the li elements */
+    padding: 0.75rem;
+    
+    /* Sets space outside of the li elements */
+    margin:  0 0.25rem;
 }
 
 #navbar ul li a:hover {
